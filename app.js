@@ -89,8 +89,7 @@ d3.csv("assets/data/data.csv").then(function (stateData) {
   
   chartGroup.call(toolTip);
 
-  // Step 8: Create event listeners to display and hide the tooltip
-  // ==============================
+    // x axis labels event listener
   circlesGroup.on("click", function (data) {
     toolTip.show(data, this);
   })
@@ -99,7 +98,7 @@ d3.csv("assets/data/data.csv").then(function (stateData) {
       toolTip.hide(data);
     });
 
-  // Create axes labels
+ // updates x scale for new data
   chartGroup.append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", 0 - margin.left + 40)
